@@ -1,0 +1,168 @@
+$primary-color: #1df9ba;
+$primary-bg-color: #f1f1f1;
+$primary-text-color: white;
+$primary-border-color: #e1e1e1;
+$error-color: #ff5964;
+$ff-primary: 'Roboto', 'sans-serif';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: $ff-primary;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $primary-text-color;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 36px;
+}
+
+.header {
+  background-color: $primary-bg-color;
+  padding: 15px 0;
+  text-align: center;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+.tags-input {
+  margin-bottom: 25px;
+  padding-left: 600px;
+  width: 1400px;
+  margin-right: 10px;
+
+  &.active {
+
+    .tags-input__wrapper {
+      border-color: $primary-text-color;
+    }
+  }
+
+  label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  &__wrapper {
+    border: 1px solid $primary-border-color;
+    background-color: white;
+    padding: 15px 15px 15px;
+    border-radius: 4px;
+    transition: border-color .3s ease;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    color: #222;
+
+    .tag {
+      background-color: #FFB21D;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      margin-right: 5px;
+      margin-bottom: 0px;
+      margin-bottom: 0px;
+      transition: background-color .3s ease;
+
+      i {
+        margin-left: 5px;
+        cursor: pointer;
+      }
+
+      &:hover {
+        background-color: darken($primary-bg-color, 10);
+      }
+    }
+
+    input {
+      border: 0;
+      outline: 0;
+      margin-bottom: 5px;
+      padding: 0;
+      flex: 1;
+      min-width: 80px;
+    }
+  }
+}
+
+.error {
+  padding: 5px 0;
+  color: $error-color;
+  font-size: 12px;
+}
+
+.search-button {
+  
+  background-color: $primary-color;
+  color: $primary-text-color;
+  padding: 10px 30px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-family: $ff-primary;
+  font-size: 20px;
+  font-weight: 400;
+  transition: background-color .3s ease;
+  border-radius: 4px;
+  height: 60px;
+  width: 150px;
+  margin-top: 25px;
+
+  background: #FFB21D;
+  color: #fff;
+
+
+  &:hover {
+    background-color: darken($primary-color, 10);
+  }
+}
+
+.jotform-logo{
+  height: 90px;
+}
+
+.head{
+    
+  background-color: #0A1551;
+  display:flex;
+  align-items: center;
+  margin: 0px;
+  padding-left: 250px;
+  height: 90px;
+  margin-bottom: 0px;
+}
+
+.header{
+  text-align: left;
+  background-color: #0A1551;
+  padding-top: 1px;
+  
+}
+.form-destegi{
+  color: white;
+  padding-left: 600px;
+}
+
+.under-form-destegi{
+  color: white;
+  padding-left: 600px;
+
+}
+.form-div{
+  text-align: left;
+  background-color: #0A1551;
+  padding-top: 1px;
+}
+
+.keyword-form{
+  display: flex;
+}
+
+
