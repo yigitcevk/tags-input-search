@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-const TagsInput = ({ label, id, name, placeholder, error, onChange, defaultTags }) => {
+const TagsInput = ({ id, placeholder, error, onChange, defaultTags }) => {
   const [value, setValue] = useState('');
   const [tags, setTags] = useState(defaultTags ? defaultTags : []);
   const [isActive, setIsActive] = useState(false);
@@ -9,7 +9,7 @@ const TagsInput = ({ label, id, name, placeholder, error, onChange, defaultTags 
 
   const changeHandler = (e) => {
     setValue(e.target.value);
-    onChange(name, tags);
+    onChange(tags);
   }
 
   /**
@@ -19,7 +19,7 @@ const TagsInput = ({ label, id, name, placeholder, error, onChange, defaultTags 
   const removeTag = (tag) => {
     const arr = tags.filter(t => t !== tag);
     setTags(arr);
-    onChange(name, arr);
+    onChange(arr);
   }
 
   /**
@@ -30,7 +30,7 @@ const TagsInput = ({ label, id, name, placeholder, error, onChange, defaultTags 
     e.preventDefault();
 
     // Add tags if input is not empty
-    if(e.target.value !== '' && e.target.value !== ',') {
+    if(e.target.value !== '') {
 
       if(e.key === 'Enter') {
       
@@ -39,7 +39,7 @@ const TagsInput = ({ label, id, name, placeholder, error, onChange, defaultTags 
           if(!tags.includes(newTag) && newTag !== '') {
             const arr = [...tags, newTag];
             setTags(arr);
-            onChange(name, arr);
+            onChange(arr);
           }
         
         setValue('');
@@ -69,7 +69,6 @@ const TagsInput = ({ label, id, name, placeholder, error, onChange, defaultTags 
 
   return(
     <div className={!isActive ? "tags-input" : "tags-input active"}>
-      {label && <label htmlFor={id ? id : name}>{label}</label>}
       <div className="tags-input__wrapper">
         <div className="tags-input__tags">
           {tags.map((tag, i) => 
@@ -80,8 +79,7 @@ const TagsInput = ({ label, id, name, placeholder, error, onChange, defaultTags 
           <input 
             type="text"
             placeholder={placeholder}
-            name={name}
-            id={id ? id : name}
+            id={id}
             value={value}
             onChange={changeHandler}
             autoComplete="off"

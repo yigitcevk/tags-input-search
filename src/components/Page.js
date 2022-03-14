@@ -2,11 +2,13 @@ import React from 'react';
 import Form from './Form';
 import Header from './Header';
 
-const Page = () => {
+const Page = ({data}) => {
   return (
     <div>
       <Header/>
-      <Form/>
+      <Form 
+      data={data}
+      />
     </div>
   );
 }
