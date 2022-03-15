@@ -7,6 +7,9 @@
 #3
 ![WhatsApp Image 2022-03-15 at 16 44 14](https://user-images.githubusercontent.com/78323809/158391381-76476e36-c07d-470f-855e-6959a0299892.jpeg)
 
+#4 When you click on specific text it redirects to the relevant page
+![WhatsApp Image 2022-03-15 at 16 59 59](https://user-images.githubusercontent.com/78323809/158394823-f60aa8b6-3338-4a85-89be-34beed48bf64.jpeg)
+
 
 # Getting Started with Create React App!
 
