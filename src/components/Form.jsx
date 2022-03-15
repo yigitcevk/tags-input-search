@@ -54,14 +54,23 @@ const Form = ({data}) => {
             }
         
             setListResults(sortedData.current.map((result) => 
-                <li key={result.question} url={result.url}>
-                    {result.question}
+                <li className='corelist' key={result.question} >
+                    <div className='dc-f-replies'>
+                        {result.repliesNum}
+                        <span>REPLIES</span> 
+                    </div>
+                    <div className='dc-f-question'>
+                        <a href={result.url} >
+                            {result.question}
+                        </a>
+                    </div>
                 </li>
             ));
 
         }
 
   }
+
 
   return (
     <div className='form-div'>
@@ -82,7 +91,7 @@ const Form = ({data}) => {
         </form>
 
         <div className='result-container'>
-            <h1>En Son Sorulanlar</h1>
+            <h1 className='en-son-sorulanlar'>En Son Sorulanlar</h1>
           <ul className='result-list'>{listResults}</ul>
         </div>
 

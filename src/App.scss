@@ -170,11 +170,69 @@ h1 {
 
 }
 
+ul{
+  margin-left: 550px;
+  margin-right: 350px;
+}
 
 
 li {
   margin: 5px;
   text-align: left;
-  
+  padding: 20px 0;
+  border-top: 1px solid #D4DAE5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
+.dc-f-replies{
+  color: #57647E;
+  font-weight: 700;
+  background-color: #E6EBF2;
+  line-height: 1.5rem;
+  margin: 0 1rem 0 0;
+  width:64px;
+  height: 56px;
+  overflow: hidden;
+  border-radius: 4px;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.dc-f-replies>span{
+  font-weight: 400;
+}
+
+.dc-f-question {
+  margin: 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.dc-f-question a {
+  color: #2B3245;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.en-son-sorulanlar{
+  text-align: left;
+  margin-left: 600px;
+  font-weight: 700;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Page from './components/Page';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
 const App = () => {
@@ -17,11 +18,13 @@ const App = () => {
   ];
 
   return (
-    <div>
-      <Page 
-      data={data}
-      />
-    </div>
+    <Router>
+      <div>
+        <Page 
+        data={data} 
+        />
+      </div>
+    </Router>
   );
 }
 
